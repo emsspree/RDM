@@ -13,7 +13,7 @@ extern "C"
 
 void usage()
 {
-    fprintf(stderr, "Commandline options\n"
+    fprintf(stderr, "Command line options\n"
                     "  --width    (-w)  Width\n"
                     "  --height   (-h)  Height\n"
                     "  --scale    (-s)  Scale (2.0 = Retina, default=current)\n"
@@ -103,7 +103,6 @@ int cmdline_main(int argc, char * const*argv)
                 int mBitres = (mode.derived.depth == 4) ? 32 : 16;
 
                 fprintf(stdout, "Display %d: {resolution=%dx%d, scale = %.1f, freq = %d, bits/pixel = %d}\n", i, mode.derived.width, mode.derived.height, mode.derived.density, mode.derived.freq, mBitres);
-
             }
 
             return 0;
@@ -163,8 +162,6 @@ int cmdline_main(int argc, char * const*argv)
              continue;
              if (bitRes && modeBitres != bitRes)
              continue;
-
-
 
              printf("mode: {resolution=%dx%d, scale = %.1f, bits/pixel = %d}\n", modeWidth,
              modeHeight, modeScale, modeBitres);

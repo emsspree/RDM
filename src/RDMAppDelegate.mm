@@ -243,7 +243,7 @@ void DisplayReconfigurationCallback(CGDirectDisplayID cg_id,
     [prompt setInformativeText:@"Reboot is required to apply changes. For safety, settings under "
                                @"/System would not be removed if no backup file was found. "
                                @"Use Edit... menu to manually reset those settings anyway."];
-    [prompt setAlertStyle:NSWarningAlertStyle];
+    [prompt setAlertStyle:NSAlertStyleWarning];
 
     NSArray* buttons = [prompt buttons];
     [[buttons objectAtIndex:0] setKeyEquivalent:@"\r"];   // Return key
@@ -261,7 +261,7 @@ void DisplayReconfigurationCallback(CGDirectDisplayID cg_id,
         } else {
             alert = [[NSAlert alloc] init];
             [alert setMessageText:[NSString stringWithFormat: @"Restore success!"]];
-            [alert setAlertStyle:NSInformationalAlertStyle];
+            [alert setAlertStyle:NSAlertStyleInformational];
         }
 
         [NSApp activateIgnoringOtherApps:YES];

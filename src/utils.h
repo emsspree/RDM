@@ -1,3 +1,6 @@
+#include <CoreGraphics/CGDirectDisplay.h>
+#include <CoreGraphics/CGDisplayConfiguration.h>
+
 #define NSStringFromCGError( value ) \
 ( \
     @{ \
